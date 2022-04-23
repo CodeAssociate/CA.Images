@@ -8,6 +8,7 @@ jobs:
         dotnet-version: ['5.0.x']
 
     steps:
+      - run: echo "The build number is ${{github.run_number}}."
       - uses: actions/checkout@v3
       - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v2
@@ -18,4 +19,4 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Test
-        run: dotnet test --no-restore --verbosity norma
+        run: dotnet test --no-restore --verbosity normal
