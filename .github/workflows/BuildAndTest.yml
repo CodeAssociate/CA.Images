@@ -50,7 +50,7 @@ jobs:
       - name: Download Content
         uses: actions/download-artifact@v3
         with: 
-          name: release-output
+          name: CaImageBuild_${{env.SEMANTIC_VERSION}}
       - name: archive output
         uses: thedoctor0/zip-release@master
         with:
