@@ -24,3 +24,12 @@ jobs:
         run: dotnet build --configuration Release --no-restore
       - name: Test
         run: dotnet test --no-restore --verbosity normal
+      - name: Publish
+        run: dotnet publish ${{ github.workspace}}/CA.Images/CA.Images.csproj -c Release -o image_app
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: uploadBuild
+          path: image_app/**
+          if-no-files-found: error
+          retention-days: 10
