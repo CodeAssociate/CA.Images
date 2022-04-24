@@ -1,5 +1,12 @@
 ﻿name: Build and Test 
 on: [push]
+
+env:
+  major: ${{1}}
+  minor: ${{0}}
+  patch: ${{github.run_number}}
+  semantic_verion: ${{env.major}}.${{env.minor}}.${{env.patch}}
+
 jobs:
   build:
     runs-on: windows-latest
@@ -9,6 +16,7 @@ jobs:
 
     steps:
       - run: echo "The build number is ${{github.run_number}}."
+      - run: echo "The build number is ${{env.semantic_verion}}."
       - uses: actions/checkout@v3
       - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v2
