@@ -2,10 +2,7 @@
 on: [push]
 
 env:
-  major: ${{1}}
-  minor: ${{0}}
-  patch: ${{github.run_number}}
-  semantic_verion: ${{env.major}}.${{env.minor}}.${{env.patch}}
+  semantic_verion: ${{1.0.}}${{github.run_number}}
 
 jobs:
   build:
