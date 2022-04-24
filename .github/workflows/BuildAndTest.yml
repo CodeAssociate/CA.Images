@@ -2,18 +2,19 @@
 on: [push]
 
 env:
-  CODE_PRODUCT_VERSION: 1.0
+  CODE_PRODUCT_VERSION: 1.0.
 
 jobs:
   build:
     runs-on: windows-latest
     env:
-      SEMANTIC_VERSION: $CODE_PRODUCT_VERSION$.{{github.run_number}}
+      SEMANTIC_VERSION: $CODE_PRODUCT_VERSION${{github.run_number}}
     strategy:
       matrix:
         dotnet-version: ['5.0.x']
 
     steps:
+      - run: echo "TheCODE_PRODUCT_VERSION is $CODE_PRODUCT_VERSION."
       - run: echo "The build number is ${{github.run_number}}."
       - run: echo "The build number is $SEMANTIC_VERSION."
       - uses: actions/checkout@v3
