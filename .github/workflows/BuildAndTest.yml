@@ -14,9 +14,9 @@ jobs:
         dotnet-version: ['5.0.x']
 
     steps:
-      - run: echo "TheCODE_PRODUCT_VERSION is $CODE_PRODUCT_VERSION."
+      - run: echo "The CODE_PRODUCT_VERSION is ${{env.CODE_PRODUCT_VERSION}}"
       - run: echo "The build number is ${{github.run_number}}."
-      - run: echo "The build number is $SEMANTIC_VERSION."
+      - run: echo "The build number is ${{SEMANTIC_VERSION}}."
       - uses: actions/checkout@v3
       - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v2
