@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: windows-latest
     env:
-      SEMANTIC_VERSION: $CODE_PRODUCT_VERSION${{github.run_number}}
+      SEMANTIC_VERSION: ${{env.CODE_PRODUCT_VERSION}}.${{github.run_number}}
     strategy:
       matrix:
         dotnet-version: ['5.0.x']
