@@ -36,7 +36,7 @@ jobs:
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: uploadBuild
+          name: CaImageBuild_${{env.SEMANTIC_VERSION}}"
           path: image_app/**
           if-no-files-found: error
           retention-days: 10
