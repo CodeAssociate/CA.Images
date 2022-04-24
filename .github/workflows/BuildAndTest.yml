@@ -19,10 +19,10 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
         #Set Semantic Verion 
-      - run: '((Get-Content -path CA.Blocks.Images.csproj -Raw) -replace "987.654.3210","$(SemanticVerion)") | Set-Content -Path CA.Blocks.Images.csproj'
+      - run: '((Get-Content -path CA.Blocks.Images.csproj -Raw) -replace "987.654.3210","${{env.SEMANTIC_VERSION}}") | Set-Content -Path CA.Blocks.Images.csproj'
         shell: powershell
         working-directory: ${{github.workspace}}\CA.Blocks.Images\
-      - run: '((Get-Content -path CA.Images.csproj -Raw) -replace "987.654.3210","$(SemanticVerion)") | Set-Content -Path CA.Images.csproj'
+      - run: '((Get-Content -path CA.Images.csproj -Raw) -replace "987.654.3210","${{env.SEMANTIC_VERSION}}") | Set-Content -Path CA.Images.csproj'
         shell: powershell
         working-directory: ${{github.workspace}}\CA.Images\
       - name: Install dependencies
