@@ -70,5 +70,5 @@ jobs:
         with:
           upload_url: ${{ steps.create-new-release.outputs.upload_url }}
           asset_path: ./release.zip
-          asset_name: CaImageBuild_${{env.SEMANTIC_VERSION}}
+          asset_name: CaImageBuild_${{env.SEMANTIC_VERSION}}.zip
           asset_content_type: application.zip
