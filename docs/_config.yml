@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
-title: [Code Associate  Open source Bulk Image Resizer]
+title: [Code Associate CA.Resizer]
 description: [A Open Source command line utility for Bulk resizing images]
-show_downloads: true
+show_downloads: false
+logo: /assets/logo.png

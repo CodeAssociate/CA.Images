@@ -35,3 +35,5 @@ Below is a example of a images resized, the Original image is  4.69MB the resize
     <img src="assets/20200330_114409_1024x600.jpg" alt="Resized Image" />
     <figcaption>Resized Image is 53,938 bytes bytes or 0.05MB size to max width of 1024px</figcaption>
 </figure>
+
+[Download the latest build](https://github.com/CodeAssociate/CA.Images/releases/ "Latest Build")
