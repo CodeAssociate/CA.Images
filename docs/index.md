@@ -23,25 +23,15 @@ The original images are not modified, the resize images will places in a nested 
 
 {original file name}{width}x{height}.{original file type}
 
-#Example Resixe Image
+# Example Resize Image
 Below is a example of a images resized, the Original image is  4.69MB the resized image is 0.053MB. This is about 1% of the Original size with 
-<table width="100%"><tr><th>Original</th><th>Resized</th></tr>
-<tr>
-    <td>
-    <figure>
-        <img src="assets/20200330_114409.jpg" width="600px" 
-            alt="Original Image">
-        <figcaption>Original Image is 4,928,291 bytes or 4.69MB</figcaption>
-    </figure>
-    </td>
-    <td>
-        <figure>
-        <img src="assets/20200330_114409_1024x600.jpg" width="600px" 
-            alt="Resized Image">
-        <figcaption>Resized Image is 53,938 bytes bytes or 0.05MB size to max width of 1024px</figcaption>
-    </figure>
-    <td>
-</tr>
-<table>
-
-
+## Original Image
+<figure>
+    <img src="assets/20200330_114409.jpg" alt="Original Image" />
+    <figcaption>Original Image is 4,928,291 bytes or 4.69MB</figcaption>
+</figure>
+## Resized Image
+<figure>
+    <img src="assets/20200330_114409_1024x600.jpg" alt="Resized Image" />
+    <figcaption>Resized Image is 53,938 bytes bytes or 0.05MB size to max width of 1024px</figcaption>
+</figure>
