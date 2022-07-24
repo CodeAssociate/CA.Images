@@ -1,7 +1,7 @@
 # CA.Images
 ![Build Status](https://github.com/codeassociate/CA.Images/actions/workflows/BuildAndTest.yml/badge.svg)
 
-# An Bulk Image Resizer 
+# A Bulk Image Resizer 
 
 This is an open source project aiming to provide a little utility to enable bulk resizing of images on a local machine.
 The premise is that you have a bunch of images all within the same directory that need to be resized keeping the existing aspect ratio, but making the images smaller. 
