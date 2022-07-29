@@ -31,6 +31,8 @@ jobs:
         run: dotnet build --configuration Release --no-restore
       - name: Test
         run: dotnet test --no-restore --verbosity normal
+      - name: Pack
+        run: dotnet pack --configuration Release ${{ github.workspace}}\CA.Blocks.Images\CA.Blocks.Images.csproj
       - name: Publish
         run: dotnet publish ${{ github.workspace}}/CA.Images/CA.Images.csproj -c Release -o image_app
       - name: Upload Build Artifact
