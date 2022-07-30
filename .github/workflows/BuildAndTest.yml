@@ -47,7 +47,7 @@ jobs:
     runs-on: windows-latest
     needs: build
     env:
-      SEMANTIC_VERSION: 1.0.${{github.run_number}
+      SEMANTIC_VERSION: 1.0.${{github.run_number}}
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Download Content
